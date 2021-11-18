@@ -1,0 +1,521 @@
+:root{
+	--color-rojo:#DE2A2C;
+	--color-rojo2:#e8696a;
+	--color-azul:#2D2C4F;
+	--color-azul2:#6b6a83;
+	--color-blanco:#F9FFDE;
+	--color-negro:#272625;
+	--color-negro2:#000000;
+	--color-gris:#4F504D;
+	--color-amarillo: #dbba12;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;	
+	font-family: sans-serif;
+}
+
+
+h1{
+	text-align: center;
+	font-size: 6em;
+	font-weight: bold;
+	color: var(--color-rojo);
+	padding: 20px;
+	text-shadow: 3px 3px 2px black;
+}
+h2{
+	font-size: 3em;
+	font-weight: bold;
+	color: var(--color-rojo);
+	padding: 20px 100px 0px 100px;
+	text-shadow: 3px 3px 2px black;
+}
+
+h3{
+	margin-top: 5px;
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+	color: var(--color-blanco);
+	text-shadow: 3px 3px 2px black;
+}
+
+p{
+	color: var(--color-blanco);
+	text-align: justify;
+	font-family: Arial, serif;
+	font-size: 18px;
+	padding: 20px 100px 20px 100px;
+	font-weight: bold;
+}
+
+body{
+	background-color:var(--color-azul);
+}
+
+header{
+	background-color:var(--color-rojo);
+	height: 70px;
+	border-bottom: solid;
+	border-color: var(--color-negro2);
+	border-width: 5px;
+
+}
+
+a{
+	text-decoration: none;
+	font-weight: bold;
+	color: var(--color-negro);
+}
+
+.conect{
+	float: right;
+	padding-top: 10px;
+	margin-right: 20px;
+	
+}
+
+.conecta{
+	padding: 5px;
+	display: inline-block;
+	opacity: 0.6;
+    transition: 0.3s;
+}
+.conecta a{
+	color: var(--color-blanco);
+}
+
+.conecta:hover{
+	opacity: 100%;
+    
+}
+.portada{
+	height: 182px;
+	background-color: var(--color-blanco);
+	text-align: center;
+	padding-top: 61.3px;
+	margin-bottom: 100px;
+}
+
+.nav{
+	padding-top: 6px;
+	margin-left: 10px;
+}
+
+.navx{
+	color:var(--color-negro);
+	padding: 10px;
+	margin-top: 20px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.navx a{
+	color: var(--color-negro);
+}
+
+.navx:hover{
+	opacity: 100%;
+}
+.navx a:hover{
+	color: var(--color-blanco);
+}
+
+#selec{
+	opacity: 100%;
+}
+
+#selec a{
+	color: var(--color-blanco);
+}
+
+.caja{
+	margin-left: 130px;
+	display: grid;
+	grid-template-columns: 50% 50%; 
+}
+
+.caja img{
+	margin-top: 60px;
+}
+
+.info{
+	margin: 20px;
+	
+}
+.info p{
+	text-shadow: 2px 2px var(--color-negro2);
+}
+.info h3{
+
+	margin-bottom: 30px;
+}
+
+.fondorojo {
+	margin: 0px;
+	background-color:var(--color-negro); 
+}
+
+.separador{
+	background-image: url(imagenes/separador1.png);
+	background-repeat: repeat;
+}
+
+.separador2{
+	background-image: url(imagenes/separador2.png);
+	background-repeat: repeat;
+}
+
+footer{
+	display: grid;
+	grid-template-columns: 90% 10%; 
+	background-color:var(--color-blanco);	
+	margin-top: 80px;
+	border-top: solid;
+	border-width: 5px;
+	border-color: var(--color-rojo);
+
+}
+
+footer p{
+	text-align: center;
+	color:var(--color-azul);
+	font-weight: normal;
+}
+
+footer img{
+	margin-top: 20px;
+	width: 80px;
+	height: 80px;
+}
+
+/*JUEGO*/
+
+.cajajuego{
+	background-color:var(--color-azul2); 
+	margin: 20px 230px 20px 230px;
+	display: grid;
+	grid-template-columns: 30% 70%; 
+	border-style: solid;
+	border-color: var(--color-negro2);
+	box-shadow: 5px 10px var(--color-negro2);
+}
+#flotadorPato{
+	margin-top: 60px;
+
+	border-style: solid;
+}
+#Terrenos{
+	display: block;
+}
+
+.mejoras{
+	margin-top: 50px 0px 50px 0px;
+	background-color:var(--color-rojo2); 
+	border-style: solid;
+	border-color: var(--color-negro2);
+	box-shadow: 5px 10px var(--color-negro2);
+}
+
+.mejoras p{
+	text-shadow: 2px 2px var(--color-negro2);
+}
+
+#patoclick{
+	transition: transform 0.3s;
+}
+
+#patoclick:hover{
+	transform: scale(1.05);
+}
+
+#patoclick:active{
+	transform: scale(0.95);
+	}
+
+/*tiendas*/
+
+.tablascompra{
+	width:100%;
+	margin:auto;
+	text-align: center;
+ 	border-collapse: collapse;
+ 	background-color: var(--color-blanco);
+}
+
+.tablascompra td, .tablascompra th{
+	padding: 8px;
+}
+#trpart, #trpter, #trpexp{
+	height: 50px;
+}
+
+.tablascompra th{
+ 	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: var(--color-azul2);
+	color: var(--color-negro2);
+	border-color: var(--color-negro2);
+}
+
+#EstadisticasGrid{
+	background-color: var(--color-negro);
+	display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#EstadisticasGrid h3{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: var(--color-rojo2);
+}
+#EstadisticasGrid p{
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+}
+#EstadisticasGrid div{
+	border: solid 2px;
+}
+
+.tablascompra tr{
+	height: 100px;
+	border-bottom: solid;
+	color: var(--color-blanco);
+	background-color: var(--color-negro);
+	border-color: var(--color-negro2);
+	font-weight: bold;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.nompato{
+	color:var(--color-rojo);
+}
+
+.nomcuack{
+	color:var(--color-amarillo);
+}
+
+span{
+	color: var(--color-rojo2);
+}
+
+#cuacks span, #cuackseg span, #poderclic span{
+	color:var(--color-amarillo);
+}
+
+.botoncompra{
+	border-radius: 10px;
+ 	background-color: var(--color-rojo);
+    border: solid;
+    border-color: var(--color-negro2);
+ 	color: var(--color-blanco);
+ 	text-align: center;
+ 	font-size: 18px;
+	padding: 10px;
+	width: 120px;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+.botoncompra:hover{
+	box-shadow: 0px 5px 20px var(--color-negro2);
+	transform: scale(1.05);
+}
+.botoncompra:active{
+	box-shadow: 0px 2px 10px var(--color-negro);
+	transform: scale(0.95);
+}
+
+/*js*/
+
+.tab {
+    overflow: hidden;
+    border-bottom: solid;
+    border-color: var(--color-negro2);
+}
+
+.tab button {
+	opacity: 80%;
+ 	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+    transition: 0.3s;
+	font-size: 17px;
+    font-weight: bold;
+
+}
+
+.tab button:hover {
+	opacity: 100%;
+	background-color: var(--color-rojo2);
+    
+}
+
+.tab button.active {
+	opacity: 100%;
+	background-color: var(--color-azul);
+	color: var(--color-blanco);
+}
+
+.tabcontent {
+	display: none;
+}
+
+.tab2 {
+  	overflow: hidden;
+  	background-color: var(--color-rojo2);
+  	border-bottom: solid;
+  	border-color: var(--color-negro2);
+}
+
+.tab2 button {
+	opacity: 80%;
+ 	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+    transition: 0.3s;
+	font-size: 17px;
+    font-weight: bold;
+
+}
+
+.tab2 button:hover {
+	opacity: 100%;
+	background-color: var(--color-rojo2);
+    
+}
+
+.tab2 button.active {
+	opacity: 100%;
+	background-color: var(--color-azul);
+	color: var(--color-blanco);
+}
+
+/*EXPEDICIONES*/
+
+
+#Expediciones > div {
+  background-color: var(--color-negro);
+  width: 100%;
+  height: 300px;
+  border: solid 1px;
+  display: grid;
+  grid-template-columns: 30% 60% 10%; 
+}
+#Expediciones h3{
+	padding: 20px 100px 0px 100px;
+}
+
+.botonAcceder{
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  border: solid 1px;
+  background: var(--color-azul2);
+  border-color: var(--color-negro);
+  position: relative;
+  transition: all .35s;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botonAcceder span{
+  position: relative;
+  z-index: 2;
+  color: var(--color-blanco);
+}
+
+.botonAcceder:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background:  var(--color-azul);
+  transition: all .35s;
+}
+
+.botonAcceder:hover:after{
+  width: 100%;
+}
+
+.botonAcceder:disabled{
+	color: var(--color-blanco);
+	background:  var(--color-azul);
+	opacity: 50%;
+}
+
+.recompensa{
+	margin-top: 30px;
+}
+.recompensa button{
+	margin-left: 100px;
+}
+.barraExpedicion {
+    margin-top: 20px;
+    margin-right: 150px;
+    margin-left: 40px;
+    position: relative;
+    border: solid 1px;
+    border-color: var(--color-negro2);
+    height: 30px;
+    background-color: var(--color-blanco);
+}
+
+.barraProgreso {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-azul);
+}
+
+/*RANKING*/
+#puntuaciones{
+	background-color: var(--color-blanco);
+	border-collapse: collapse;
+	width: 70%;
+	margin: 20px 230px 20px 230px;
+}
+
+#puntuaciones td, #puntuaciones th{
+	text-align: center;
+ 	padding: 8px;
+}
+
+#puntuaciones tr{
+	transition: transform 0.7s;
+}
+
+.rank:hover {
+	transform: scale(1.1);
+	background-color: var(--color-negro);
+	color: var(--color-blanco);
+	font-weight: bold;
+}
+
+#puntuaciones th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: var(--color-rojo);
+    color: white;
+}
+
+
+
+/*PROJECTO*/
+.project{
+	margin: 0px 130px 0px 130px;
+}
