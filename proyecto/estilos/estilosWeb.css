@@ -241,16 +241,7 @@ li{
 .fondorojo {
 	margin: 0px;
 	background-color:var(--color-negro); 
-}
-
-.separador{
-	background-image: url(/projecte_m12/imagenes/separador1.png);
-	background-repeat: repeat;
-}
-
-.separador2{
-	background-image: url(/projecte_m12/imagenes/separador2.png);
-	background-repeat: repeat;
+	padding-bottom: 20px;
 }
 
 footer{
