@@ -249,7 +249,7 @@ function render(){
 	document.getElementById("proCha").innerHTML = pround[0]+ " C/s";
 	document.getElementById("proLag").innerHTML = pround[1]+ " C/s";
 	document.getElementById("proPla").innerHTML = pround[2]+ " C/s";
-	document.getElementById("proGra").innerHTML = terreno[3] * terreno[1] + " C/s";
+	document.getElementById("proGra").innerHTML = terreno[3] * (2*terreno[1]) + " C/s";
 	costeGuerreros = parseInt((terreno[4] * cuackproduct[4] * (cuackseg/100))); //guerreros
 	Math.round(costeGuerreros);	//guerreros
 	document.getElementById("proGue").innerHTML = costeGuerreros + " C/s"; //guerreros
