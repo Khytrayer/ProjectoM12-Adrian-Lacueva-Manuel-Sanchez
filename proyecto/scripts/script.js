@@ -5,7 +5,7 @@ var poderejercito = 0;
 
 //ejercito
 var guerra = false;
-var armamento = 0;
+var armamento = 22220;
 var espada = false;
 var casco = false;
 var martillo = false;
@@ -40,6 +40,7 @@ var cosechadora = false;
 var coronaOlimpo = false;
 
 function clic(){
+    
 	cuack += poderclic;
 	ScuackC += poderclic;
 	if(ext){
@@ -47,7 +48,6 @@ function clic(){
 		ScuackC += Math.round(parseInt(cuackseg/95));
 	}
 	Sclicenpato++;
-
 }
 
 function comprar(numero){
@@ -105,6 +105,7 @@ function comprarArtefacto(numero){
     		$("#cetro").remove();
     		$("#poderejercito").show();
     		guerra = true;
+    		document.getElementById("patoclick").src="imagenes/patorey.png";
     	break;
     	case 6:
     		$("#tabExpediciones").show();
@@ -189,10 +190,10 @@ function poder(){
 			poderejercito += 5;
 		}
 		if (martillo){
-			poderejercito += 25;
+			poderejercito += 100;
 		}
 		if (hacha){
-			poderejercito += 100;
+			poderejercito += 200;
 		}
 	}
 }
@@ -292,7 +293,7 @@ function entrarExpedicion(num) {
 	  		if(cuack >= 7000){
 	  			cuack -= 7000;
 	    		var elem = document.getElementById("bosqueBar");   
-				  var id = setInterval(frame, 120);
+				  var id = setInterval(frame, 70);
 				  var recompensa = 0;
 				  document.getElementById("botonBosque").disabled = true;
 				  function frame() {
@@ -306,8 +307,8 @@ function entrarExpedicion(num) {
 									armamento += 2;
 								}
 								if(recompensa==0){
-									document.getElementById("bosqueR").innerHTML = "Experiencia militar (+3 Poder)";
-									armamento += 3;
+									document.getElementById("bosqueR").innerHTML = "Experiencia militar (+4 Poder)";
+									armamento += 4;
 								}
 				      }
 				      else{
@@ -327,7 +328,7 @@ function entrarExpedicion(num) {
 			if(cuack >= 18000){
 	  			cuack -= 18000;
 	    		var elem = document.getElementById("pantanoBar");   
-				  var id = setInterval(frame, 240);
+				  var id = setInterval(frame, 140);
 				  var recompensa = 0;
 				  document.getElementById("botonPantano").disabled = true;
 				  function frame() {
@@ -348,8 +349,8 @@ function entrarExpedicion(num) {
 									}
 								}
 								else{
-									document.getElementById("pantanoR").innerHTML = "Experiencia militar (+4 Poder)";
-									armamento += 4;
+									document.getElementById("pantanoR").innerHTML = "Experiencia militar (+7 Poder)";
+									armamento += 7;
 								}
 				      }
 				      else{
@@ -368,7 +369,7 @@ function entrarExpedicion(num) {
     		if(cuack >= 30000){
 	  			cuack -= 30000;
 	    		var elem = document.getElementById("cascadaBar");   
-				  var id = setInterval(frame, 500);
+				  var id = setInterval(frame, 300);
 				  var recompensa = 0;
 				  document.getElementById("botonCascada").disabled = true;
 				  function frame() {
@@ -383,8 +384,8 @@ function entrarExpedicion(num) {
 										espada = true;
 									}
 									else{
-										document.getElementById("cascadaR").innerHTML = "Experiencia militar (+8 Poder)";
-										armamento += 8;
+										document.getElementById("cascadaR").innerHTML = "Experiencia militar (+9 Poder)";
+										armamento += 9;
 										
 									}
 								}
@@ -395,8 +396,8 @@ function entrarExpedicion(num) {
 										armamento += 100;
 									}
 									else{
-										document.getElementById("cascadaR").innerHTML = "Experiencia militar (+8 Poder)";
-										armamento += 8;
+										document.getElementById("cascadaR").innerHTML = "Experiencia militar (+11 Poder)";
+										armamento += 11;
 										
 									}
 								}
@@ -425,7 +426,7 @@ function entrarExpedicion(num) {
     	if(cuack >= 43000){
 	  			cuack -= 43000;
 	    		var elem = document.getElementById("cuevaBar");   
-				var id = setInterval(frame, 700);
+				var id = setInterval(frame, 350);
 				var recompensa = 0;
 				document.getElementById("botonCueva").disabled = true;
 				  function frame() {
@@ -447,8 +448,8 @@ function entrarExpedicion(num) {
 								}
 								
 								else{
-									document.getElementById("cuevaR").innerHTML = "Experiencia militar (+15 Poder)";
-									armamento += 15;
+									document.getElementById("cuevaR").innerHTML = "Experiencia militar (+25 Poder)";
+									armamento += 25;
 								}
 				      		}
 				      else{
@@ -467,7 +468,7 @@ function entrarExpedicion(num) {
     		if(cuack >= 60000){
 	  			cuack -= 60000;
 	    		var elem = document.getElementById("montaniaBar");   
-				  var id = setInterval(frame, 700);
+				  var id = setInterval(frame, 380);
 				  var recompensa = 0;
 				  document.getElementById("botonMontania").disabled = true;
 				  function frame() {
@@ -477,12 +478,12 @@ function entrarExpedicion(num) {
 				      	document.getElementById("montaniaVD").innerHTML = "VICTORIA!";
 								recompensa = getRandomInt(0,2);
 								if(recompensa==1){
-									document.getElementById("montaniaR").innerHTML = "Experiencia militar (+100 Poder)";
-									armamento+= 100;
+									document.getElementById("montaniaR").innerHTML = "Experiencia militar (+125 Poder)";
+									armamento+= 125;
 								}
 								if(recompensa==0){
 									if(!hacha){
-										document.getElementById("cuevaR").innerHTML = "¡Encontraste una hacha! (+100 Poder por cada Guerrero)";
+										document.getElementById("cuevaR").innerHTML = "¡Encontraste una hacha! (+200 Poder por cada Guerrero)";
 										hacha = true;
 									}
 									else{
@@ -558,7 +559,6 @@ function reclamaRecompensa(num){
     	break;
   		case 5:
     		$("#rVolcan").hide();
-    		document.getElementById("botonVolcan").disabled = false;
     	break;
 	}
 }
@@ -592,7 +592,7 @@ function reclamar(numero){
     	break;
     	case 4:
     	if(terreno[4]>=10){
-  			poderejercito+=100;
+  			armamento+=100;
   			document.getElementById("rec4").disabled = true;
   		}
     	break;
@@ -627,8 +627,8 @@ function reclamar(numero){
 			}
     	break;
     	case 10:
-    	if(artefacto[0] == true && artefacto[1] == true && artefacto[2] == true && artefacto[3] == true && artefacto[4] == true &&
-    	artefacto[5] == true && artefacto[6] == true){
+    	if(artefacto[0] == true && artefacto[1] == true && artefacto[2] == true && artefacto[3] == true && artefacto[4] == true &&	artefacto[5] == true && artefacto[6] == true && artefacto[7] == true
+    	    && artefacto[8] == true){
   			cuack+=77777;
   			document.getElementById("rec10").disabled = true;
   			}
@@ -650,5 +650,7 @@ function abrirMenu(evt, tab) {
   document.getElementById(tab).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+
 
 
