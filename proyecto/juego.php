@@ -212,7 +212,7 @@
 					</tr>
 					<tr id="ratonExtranio">
 						<td>RATÓN EXTRAÑO</td>
-						<td>Aumenta tus clicks en un 25% de la Producción.</td>
+						<td>Aumenta ligeramente tu poder de click según tu valor de Producción.</td>
 						<td>80000</td>
 						<td><button class="botoncompra" onclick="comprarArtefacto(7)">Comprar</button></td>
 					</tr>
@@ -461,20 +461,18 @@
 				  	<p>Coste: 1000000 C</p>
 				  	
 			    </div>
-
-			  	<div class="barraExpedicion">
+			 <div class="barraExpedicion">
 					<div id="volcanBar" class="barraProgreso"></div>
 					<div class="recompensa" id="rVolcan" hidden="true">
 						<h3 id="volcanVD"></h3>	
 						<div>
 							<p id="volcanR"></p>
-							<button class="botoncompra" onclick="reclamaRecompensa(4)">REGRESAR</button>
+							<button class="botoncompra" onclick="reclamaRecompensa(5)">REGRESAR</button>
 						</div>
 					</div>
-				</div>	
-
+				</div>
 				<div>
-			  		<button class="botonAcceder" onclick=""><span>ACCEDER</span></button>		  	
+			  		<button class="botonAcceder" id="botonVolcan" onclick="entrarExpedicion(5)"> <span>ACCEDER</span></button>		  	
 			  	</div>
 			</div>
 
